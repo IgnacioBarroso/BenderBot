@@ -24,7 +24,8 @@ for filename in os.listdir('./src/cogs'):
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name='l esclavo'))
+    await client.change_presence(activity=discord.Game(name='League Of Legends'))
     print('I\'m ready')
-    
-client.run('ODU4NTgxNjI3ODE0MDE5MDgy.YNgOcw.t3z2e9SUREfsoFKw69jLl75SvxA')
+
+token = open("src/token.txt", "r")
+client.run(token.read())
